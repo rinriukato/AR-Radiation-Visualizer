@@ -1,0 +1,15 @@
+# Ignore the following folders
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+.vs/
+.idea/
+.user/
+.userprefs/
+# Ignore other non-essential files
+*.csproj
+*.unityproj
+*.sln
+*.tmp
