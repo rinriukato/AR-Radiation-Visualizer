@@ -27,6 +27,12 @@ public class Radiate : MonoBehaviour
         calculateZones();
     }
 
+    public void setRadiationIntensity(float newValue) 
+    {
+        radiationIntensity = newValue;
+        calculateZones();
+    } 
+
     // The 'zone' radius is dictated by the inverse square law given by radiation intensity at a given distance
     void calculateZones() 
     {
