@@ -10,6 +10,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
     public class ObjectSpawner : MonoBehaviour
     {
         public bool isObjectSpawned = false;
+        public GameObject m_object;
 
         [SerializeField]
         [Tooltip("The camera that objects will face when spawned. If not set, defaults to the main camera.")]
@@ -215,6 +216,9 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             var newObject = Instantiate(m_ObjectPrefabs[objectIndex]);
             if (m_SpawnAsChildren)
                 newObject.transform.parent = transform;
+
+            m_object = newObject;
+            Debug.Log("Assigned Object" + m_object);
 
             newObject.transform.position = spawnPoint;
             EnsureFacingCamera();
