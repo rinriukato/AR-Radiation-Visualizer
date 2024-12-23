@@ -400,6 +400,7 @@ public class ARTemplateMenuManager : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
+        m_ObjectSpawner.isObjectSpawned = false;
     }
 
     /// <summary>
