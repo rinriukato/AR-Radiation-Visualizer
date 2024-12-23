@@ -13,7 +13,7 @@ public class Radiate : MonoBehaviour
     private Vector3 maxScale = new Vector3(50,50,50); // in diameter
     private const float greenRange = 1;
     private const float yellowRange = 10;
-    private const float orangeRange = 49;
+    private const float orangeRange = 25;
     private const float redRange = 50;
 
     private float radiationIntensity = 0; // in mSv
@@ -30,14 +30,19 @@ public class Radiate : MonoBehaviour
     // The 'zone' radius is dictated by the inverse square law given by radiation intensity at a given distance
     void calculateZones() 
     {
-        float greenZone = Mathf.Sqrt(radiationIntensity/greenRange);
-        float yellowZone = Mathf.Sqrt(radiationIntensity/yellowRange);
-        float orangeZone = Mathf.Sqrt(radiationIntensity/orangeRange);
-        float redZone = Mathf.Sqrt(radiationIntensity/redRange);
-        Debug.Log("Green Zone:" + greenRange);
+        float greenZone = Mathf.Sqrt(radiationIntensity/greenRange) * 2;
+        float yellowZone = Mathf.Sqrt(radiationIntensity/yellowRange) * 2;
+        float orangeZone = Mathf.Sqrt(radiationIntensity/orangeRange) * 2;
+        float redZone = Mathf.Sqrt(radiationIntensity/redRange) * 2;
+        Debug.Log("Green Zone:" + greenZone);
         Debug.Log("Yellow Zone:" + yellowZone);
         Debug.Log("Orange Zone:" + orangeZone);
         Debug.Log("Red Zone:" + redZone);
+
+        dangerZoneGreen.transform.localScale = new Vector3(greenZone, greenZone, greenZone);
+        dangerZoneYellow.transform.localScale = new Vector3(yellowZone, yellowZone, yellowZone);
+        dangerZoneOrange.transform.localScale = new Vector3(orangeZone, orangeZone, orangeZone);
+        dangerZoneRed.transform.localScale = new Vector3(redZone, redZone, redZone);
     }
 
     void InitializeZones() 
