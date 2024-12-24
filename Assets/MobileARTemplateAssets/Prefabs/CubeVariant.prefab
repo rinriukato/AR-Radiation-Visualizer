@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 849957553816077869}
   - component: {fileID: 163530525097046292}
   - component: {fileID: 4392644875040836064}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DangerZoneOrange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.54, y: 1.54, z: 1.54}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4762239851910345287}
@@ -102,7 +102,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 6820890925864841661}
   - component: {fileID: 4135004959939143302}
   - component: {fileID: 5653295122422615964}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DangerZoneRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,7 +137,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.54, y: 1.54, z: 1.54}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4762239851910345287}
@@ -210,7 +210,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 3527821730011489093}
   - component: {fileID: 2849184430984130046}
   - component: {fileID: 7977995252137044465}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DangerZoneGreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +245,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10.969999, y: 10.969999, z: 10.969999}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4762239851910345287}
@@ -318,7 +318,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -336,7 +336,7 @@ GameObject:
   - component: {fileID: 4918150953155392748}
   - component: {fileID: 2824290033826012824}
   - component: {fileID: 3612794617450073900}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DangerZoneYellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.4599998, y: 3.4599998, z: 3.4599998}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4762239851910345287}
@@ -426,7 +426,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -453,6 +453,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CubeVariant
+      objectReference: {fileID: 0}
+    - target: {fileID: 613292779795284151, guid: ebd7292e888c84f05924605e51048072,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3471538223933167219, guid: ebd7292e888c84f05924605e51048072,
         type: 3}

@@ -27,7 +27,7 @@ public class InputFieldHandler : MonoBehaviour
 
         if (objectSpawner.m_object != null) {
             // Debug.Log("object avaliable?");
-            Debug.Log(objectSpawner.m_object);
+            //Debug.Log(objectSpawner.m_object);
 
             if (radiateComponent == null) {
                 radiateComponent = objectSpawner.m_object.GetComponent<Radiate>();
@@ -39,7 +39,7 @@ public class InputFieldHandler : MonoBehaviour
         }
         else 
         {
-            Debug.Log("Not avaliable?");
+            //Debug.Log("Not avaliable?");
         }
     }
 

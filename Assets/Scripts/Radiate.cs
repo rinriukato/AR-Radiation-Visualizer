@@ -23,7 +23,6 @@ public class Radiate : MonoBehaviour
     void Start()    
     {
         InitializeZones();
-        radiationIntensity = 30;
         calculateZones();
     }
 
@@ -40,10 +39,10 @@ public class Radiate : MonoBehaviour
         float yellowZone = Mathf.Sqrt(radiationIntensity/yellowRange) * 2;
         float orangeZone = Mathf.Sqrt(radiationIntensity/orangeRange) * 2;
         float redZone = Mathf.Sqrt(radiationIntensity/redRange) * 2;
-        Debug.Log("Green Zone:" + greenZone);
-        Debug.Log("Yellow Zone:" + yellowZone);
-        Debug.Log("Orange Zone:" + orangeZone);
-        Debug.Log("Red Zone:" + redZone);
+        // Debug.Log("Green Zone:" + greenZone);
+        // Debug.Log("Yellow Zone:" + yellowZone);
+        // Debug.Log("Orange Zone:" + orangeZone);
+        // Debug.Log("Red Zone:" + redZone);
 
         dangerZoneGreen.transform.localScale = new Vector3(greenZone, greenZone, greenZone);
         dangerZoneYellow.transform.localScale = new Vector3(yellowZone, yellowZone, yellowZone);
