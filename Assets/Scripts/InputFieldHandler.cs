@@ -31,10 +31,10 @@ public class InputFieldHandler : MonoBehaviour
 
             if (radiateComponent == null) {
                 radiateComponent = objectSpawner.m_object.GetComponent<Radiate>();
-                radiateComponent.setRadiationIntensity(value);
+                radiateComponent.SetRadiationIntensity(value);
             }
             else {
-                radiateComponent.setRadiationIntensity(value);
+                radiateComponent.SetRadiationIntensity(value);
             }
         }
         else 

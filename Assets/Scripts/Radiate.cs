@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class Radiate : MonoBehaviour
 {
 
@@ -17,23 +18,23 @@ public class Radiate : MonoBehaviour
     private const float redRange = 50;
 
     private float radiationIntensity = 0; // in mSv
-
+    private int currentType = 0; // 0 - Alpha, 1 - Beta, 2 - Gamma
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()    
     {
         InitializeZones();
-        calculateZones();
+        CalculateZones();
     }
 
-    public void setRadiationIntensity(float newValue) 
+    public void SetRadiationIntensity(float newValue) 
     {
         radiationIntensity = newValue;
-        calculateZones();
+        CalculateZones();
     } 
 
     // The 'zone' radius is dictated by the inverse square law given by radiation intensity at a given distance
-    void calculateZones() 
+    void CalculateZones() 
     {
         float greenZone = Mathf.Sqrt(radiationIntensity/greenRange) * 2;
         float yellowZone = Mathf.Sqrt(radiationIntensity/yellowRange) * 2;
@@ -53,8 +54,14 @@ public class Radiate : MonoBehaviour
     void InitializeZones() 
     {
         dangerZoneGreen.transform.localScale = defaultScale;
-        dangerZoneYellow.transform.localScale = defaultScale;
+        dangerZoneYellow.transform.localScale =  defaultScale;
         dangerZoneOrange.transform.localScale = defaultScale;
         dangerZoneRed.transform.localScale = defaultScale;
+    }
+
+    public void SetRadiationType(int type) 
+    {
+        currentType = type;
+        Debug.Log("Current Type is now: " + currentType);
     }
 }
