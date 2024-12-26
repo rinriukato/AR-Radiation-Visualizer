@@ -1,0 +1,2 @@
+D:\MainCodebase\Unity\AR Radiation Visualizer\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+D:\MainCodebase\Unity\AR Radiation Visualizer\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
