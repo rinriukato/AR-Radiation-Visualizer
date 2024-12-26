@@ -8,6 +8,8 @@ public class Radiate : MonoBehaviour
     [SerializeField] private GameObject dangerZoneYellow; // 1 - 10 mSv
     [SerializeField] private GameObject dangerZoneOrange;// 10 - 49 mSv
     [SerializeField] private GameObject dangerZoneRed; // 50+ mSv
+    
+    [SerializeField] private float alphaScaleFactor = 0.02f;
 
 
     private Vector3 defaultScale = new Vector3(0, 0, 0);
@@ -20,12 +22,6 @@ public class Radiate : MonoBehaviour
     private float radiationIntensity = 0; // in mSv
     private int currentType = 0; // 0 - Alpha, 1 - Beta, 2 - Gamma
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()    
-    {
-        InitializeZones();
-        CalculateZones();
-    }
 
     public void SetRadiationIntensity(float newValue) 
     {
@@ -49,6 +45,29 @@ public class Radiate : MonoBehaviour
         dangerZoneYellow.transform.localScale = new Vector3(yellowZone, yellowZone, yellowZone);
         dangerZoneOrange.transform.localScale = new Vector3(orangeZone, orangeZone, orangeZone);
         dangerZoneRed.transform.localScale = new Vector3(redZone, redZone, redZone);
+
+        CalculateRadiationType();
+    }
+
+    void CalculateRadiationType() 
+    {   
+        // Alpha Particles
+        if (currentType == 0) {
+
+            dangerZoneGreen.transform.localScale = dangerZoneGreen.transform.localScale * alphaScaleFactor;
+            dangerZoneYellow.transform.localScale = dangerZoneYellow.transform.localScale * alphaScaleFactor;
+            dangerZoneOrange.transform.localScale = dangerZoneOrange.transform.localScale * alphaScaleFactor;
+            dangerZoneRed.transform.localScale =  dangerZoneRed.transform.localScale * alphaScaleFactor;
+
+        }
+        // Beta Particles
+        else if (currentType == 1) {
+
+        }
+        // Gamma Rays
+        else {
+
+        }
     }
 
     void InitializeZones() 
