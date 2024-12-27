@@ -83,4 +83,9 @@ public class Radiate : MonoBehaviour
         currentType = type;
         Debug.Log("Current Type is now: " + currentType);
     }
+
+    public float getRadiationIntensity()
+    {
+        return radiationIntensity;
+    }
 }

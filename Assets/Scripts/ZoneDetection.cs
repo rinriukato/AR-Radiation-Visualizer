@@ -6,10 +6,10 @@ public class ZoneDetection : MonoBehaviour
 {
 
     public TextMeshProUGUI textMeshPro;
+    private string zoneName = "None";
     void OnTriggerEnter(Collider other) 
     {
         string name = other.gameObject.name;
-        string zoneName = "None";
 
         if (name == "DangerZoneGreen") 
         {
@@ -29,6 +29,24 @@ public class ZoneDetection : MonoBehaviour
         }
 
         textMeshPro.text = "Zone: " + zoneName;
+    }
+
+
+    void OnTriggerExit(Collider other) 
+    {
+        string name = other.gameObject.name;
+
+        if (name == "DangerZoneGreen") 
+        {
+            zoneName = "None";
+        }
+
+        textMeshPro.text = "Zone: " + zoneName;
+    }
+
+    public string getCurrentZone() 
+    {
+        return zoneName;
     }
 
 }
