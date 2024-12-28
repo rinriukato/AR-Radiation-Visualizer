@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Radiate : MonoBehaviour
 {
-
+    [SerializeField] private ParticleSystem particleSystem;
     [SerializeField] private GameObject dangerZoneGreen; // 0 - 1  mSv
     [SerializeField] private GameObject dangerZoneYellow; // 1 - 10 mSv
     [SerializeField] private GameObject dangerZoneOrange;// 10 - 49 mSv
