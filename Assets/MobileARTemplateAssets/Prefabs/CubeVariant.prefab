@@ -173,7 +173,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: caf1e7971270e4a448d2f728cec65d9a, type: 2}
+  - {fileID: 2100000, guid: 0ff31722f4ea2514d9ddfc889a4b84e3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -620,3 +620,4 @@ MonoBehaviour:
   dangerZoneYellow: {fileID: 7651606210899802601}
   dangerZoneOrange: {fileID: 230081586812793819}
   dangerZoneRed: {fileID: 4327850600353453236}
+  alphaScaleFactor: 0.02

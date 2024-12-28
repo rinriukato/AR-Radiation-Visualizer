@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
-
+using TMPro;
 
 public class DistanceCalculation : MonoBehaviour
 {
@@ -8,6 +8,8 @@ public class DistanceCalculation : MonoBehaviour
     Camera camera;
     [SerializeField] 
     ObjectSpawner m_ObjectSpawner;
+    [SerializeField]
+    public TextMeshProUGUI textMeshPro;
 
     /// <summary>
     /// The behavior to use to spawn objects.
@@ -70,11 +72,11 @@ public class DistanceCalculation : MonoBehaviour
             float distance = Vector3.Distance(camera.transform.position, objectSpawner.m_object.transform.position);
             float intensity = radiateComponent.getRadiationIntensity();
             float radiation = intensity/Mathf.Pow(distance, 2);
-            Debug.Log("Radiation: " + radiation);
+            textMeshPro.text = "Dose:\n " + radiation + " mSv/hr";
         }
         else
         {
-            Debug.Log("Not in a zone, only experience background radiation");
+            textMeshPro.text = "Dose:\n 0.000228 mSv/hr";
         }
     }
 }

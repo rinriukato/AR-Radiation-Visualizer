@@ -16,6 +16,10 @@ using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 public class ARTemplateMenuManager : MonoBehaviour
 {
     [SerializeField]
+    [Tooltip("Object containing Sound Manager")]
+    SoundManager m_SoundManager;
+
+    [SerializeField]
     [Tooltip("Button that opens the create menu.")]
     Button m_CreateButton;
 
@@ -401,6 +405,8 @@ public class ARTemplateMenuManager : MonoBehaviour
             Destroy(child.gameObject);
         }
         m_ObjectSpawner.isObjectSpawned = false;
+        m_SoundManager.StopAllAudio();
+
     }
 
     /// <summary>
