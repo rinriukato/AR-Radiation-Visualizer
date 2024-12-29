@@ -145,6 +145,46 @@ public class GoalManager : MonoBehaviour
         set => m_OptionsButton = value;
     }
 
+    [Tooltip("The Intensity Modal to enable once the greeting prompt is dismissed.")]
+    [SerializeField]
+    GameObject m_IntensityModal;
+
+    /// <summary>
+    /// The Intensity Modal to enable once the greeting prompt is dismissed
+    /// </summary>
+    public GameObject IntensityModal
+    {
+        get => m_IntensityModal;
+        set => m_IntensityModal = value;
+    }
+
+    [Tooltip("The Geiger Counter to enable once the greeting prompt is dismissed.")]
+    [SerializeField]
+    GameObject m_GeigerCounter;
+
+    /// <summary>
+    /// The Geiger Counter to enable once the greeting prompt is dismissed.
+    /// </summary>
+    public GameObject geigerCounter
+    {
+        get => m_GeigerCounter;
+        set => m_GeigerCounter = value;
+    }
+
+    [Tooltip("The Zone Indicator to enable once the greeting prompt is dismissed.")]
+    [SerializeField]
+    GameObject m_ZoneIndicator;
+
+    /// <summary>
+    /// The Zone Indicator to enable once the greeting prompt is dismissed.
+    /// </summary>
+    public GameObject zoneIndicator
+    {
+        get => m_ZoneIndicator;
+        set => m_ZoneIndicator = value;
+    }
+
+
     [Tooltip("The Create Button to enable once the greeting prompt is dismissed.")]
     [SerializeField]
     GameObject m_CreateButton;
@@ -306,7 +346,10 @@ public class GoalManager : MonoBehaviour
 
         m_GreetingPrompt.SetActive(false);
         m_OptionsButton.SetActive(true);
-        m_CreateButton.SetActive(true);
+        //m_CreateButton.SetActive(true);
+        m_IntensityModal.SetActive(true);
+        m_ZoneIndicator.SetActive(true);
+        m_GeigerCounter.SetActive(true);
         m_MenuManager.enabled = true;
 
         for (int i = startingStep; i < m_StepList.Count; i++)

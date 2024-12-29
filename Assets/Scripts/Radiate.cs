@@ -45,6 +45,10 @@ public class Radiate : MonoBehaviour
         dangerZoneYellow.transform.localScale = new Vector3(yellowZone, yellowZone, yellowZone);
         dangerZoneOrange.transform.localScale = new Vector3(orangeZone, orangeZone, orangeZone);
         dangerZoneRed.transform.localScale = new Vector3(redZone, redZone, redZone);
+        // Set the radius of the particle system to that of the green area.
+        var main = particleSystem.main;
+        main.startLifetime = greenZone;
+        main.startSpeed = greenZone;
 
         CalculateRadiationType();
     }
