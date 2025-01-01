@@ -8,7 +8,7 @@ The primary goal of this project is to create an interactive platform for learni
 
 ## Key Features
 - **Basic Radiation Simulation**: Visualize the spread and intensity of different types of radiation in real-time.
-- **Shielding Interaction**: Simulate the effects of various shielding materials (e.g., lead, concrete, water) on radiation intensity.
+- **Different Types of Particles**: Simulate different radioactive particles (Alpha, Beta, and Gamma) and how they effect the range of the radiation zones due to its interaction with the atmosphere.
 - **AR Integration**: Utilize Unity’s AR Foundation to place radiation zones on real-world surfaces using augmented reality.
 - **Interactive Learning**: Allow users to modify radiation source intensity, observe shielding effectiveness, and understand key safety protocols.
 - **Mobile Support**: Compatible with ARCore and ARKit-enabled mobile devices.
