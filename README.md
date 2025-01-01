@@ -14,7 +14,7 @@ The primary goal of this project is to create an interactive platform for learni
 - **Mobile Support**: Compatible with ARCore and ARKit-enabled mobile devices.
 
 ## Demo Video
-https://docs.google.com/file/d/1CCrZWGVWk1hqCeLJNw0elWNrCEaTuroo/preview
+[Click here to view demo video](https://drive.google.com/file/d/1CCrZWGVWk1hqCeLJNw0elWNrCEaTuroo/view?usp=sharing)
 
 ## Future Features
 - **Improvements to Radiation Simulation**: Refine radiation simulation models with expert input to improve the accuracy of particle behavior and physics.
