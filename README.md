@@ -1,4 +1,4 @@
-# AR Radiation Visualization
+# Radiation Awareness and Visualization Augmented Reality (RAVAR)
 
 ## Overview
 The **AR Radiation Visualization** is an augmented reality (AR) application developed in Unity, designed to visualize radiation zones and help users understand radiation behavior, shielding, and safety measures. The app serves as an educational tool for both students and professionals, providing an immersive experience to simulate real-world radiation scenarios.
