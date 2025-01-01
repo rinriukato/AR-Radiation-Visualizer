@@ -46,11 +46,8 @@ public class Radiate : MonoBehaviour
         dangerZoneOrange.transform.localScale = new Vector3(orangeZone, orangeZone, orangeZone);
         dangerZoneRed.transform.localScale = new Vector3(redZone, redZone, redZone);
         // Set the radius of the particle system to that of the green area.
-        var main = particleSystem.main;
-        main.startLifetime = greenZone;
-        main.startSpeed = greenZone;
-
         CalculateRadiationType();
+        CalculateRadiationTypeParticle(greenZone);
     }
 
     void CalculateRadiationType() 
@@ -62,16 +59,32 @@ public class Radiate : MonoBehaviour
             dangerZoneYellow.transform.localScale = dangerZoneYellow.transform.localScale * alphaScaleFactor;
             dangerZoneOrange.transform.localScale = dangerZoneOrange.transform.localScale * alphaScaleFactor;
             dangerZoneRed.transform.localScale =  dangerZoneRed.transform.localScale * alphaScaleFactor;
-
         }
         // Beta Particles
         else if (currentType == 1) {
-
+            // Seperate Calculation Here?
         }
         // Gamma Rays
         else {
 
         }
+    }
+
+    void CalculateRadiationTypeParticle(float greenZone) 
+    {
+        var main = particleSystem.main;
+
+        if (currentType == 0 ) 
+        {
+            main.startLifetime = greenZone * alphaScaleFactor;
+            main.startSpeed = greenZone * alphaScaleFactor;
+        }
+        else 
+        {
+            main.startLifetime = greenZone;
+            main.startSpeed = greenZone;
+        }
+
     }
 
     void InitializeZones() 
